@@ -16,20 +16,20 @@ const Projects = () => {
             id:2,
             src:csew,
             title:'Pet Shop App',
-            href:'https://github.com/swastik2203/doggyapp'
+            href:'https://doggyapp-ten.vercel.app/'
           
         },
         {
             id:3,
             src:hdp,
             title:'Amazon Clone App',
-            href:'https://github.com/swastik2203/Amazon-Clone-App'
+            href:'https://clone-f7b14.web.app/'
         },
         {
             id:4,
             src:fer,
             title:'Dozion App - One Step Destination For Crypto',
-            href:'https://github.com/swastik2203/dozion-project'
+            href:'https://dozion.netlify.app/'
         },
 
     ]
