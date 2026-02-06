@@ -2,7 +2,6 @@ import React from 'react';
 import { TiArrowRightThick } from 'react-icons/ti';
 import { HiDownload } from 'react-icons/hi';
 import { Link } from 'react-scroll';
-import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import AnimatedCharacter from './AnimatedCharacter';
 
