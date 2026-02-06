@@ -11,7 +11,7 @@ const Projects = () => {
     {
       id: 1,
       title: 'Smart LangMail',
-      description: 'Engineered email job offer parser using Node.js, LangChain, and OpenAI embeddings. Implemented IMAP integration to parse 1000+ emails, extract structured job data (title, salary, company), and store vector embeddings in Pinecone for semantic search queries like \"remote React jobs in Bangalore\".',
+      description: 'Engineered email job offer parser using Node.js, LangChain, and OpenAI embeddings. Implemented IMAP integration to parse 1000+ emails, extract structured job data (title, salary, company), and store vector embeddings in Pinecone for semantic search queries like "remote React jobs in Bangalore".',
       techStack: ['Node.js', 'LangChain', 'OpenAI', 'Pinecone', 'IMAP', 'React.js'],
       github: 'https://github.com/swastik2203/Smart-LangMail',
       demo: 'https://github.com/swastik2203/Smart-LangMail',
