@@ -1,63 +1,160 @@
-import React from "react";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
 
-import {FaGithub, FaLinkedin} from 'react-icons/fa'
-import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
 const Contact = () => {
   return (
-    <>
-    <div
-      name="Contact Me"
-      className="w-full h-screen bg-gradient-to-r from-black via-gray-900 to-black p-4 text-white mt-11"
-    >
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-white">
-            Contact Me
+    <div name="Contact Me" className="section-container">
+      <div className="max-w-screen-lg mx-auto w-full">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="gradient-text">Get In Touch</span>
+          </h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-[#3B82F6] to-[#C084FC] rounded-full"></div>
+          <p className="text-[#94A3B8] mt-4">
+            I'm currently open to new opportunities and collaborations. Feel free to reach out!
           </p>
-        </div>
+        </motion.div>
 
-        <div className=" flex justify-center items-center">
-          <form
-            action="https://getform.io/f/c915a893-226d-4b9d-9dfd-f5b0d52df43b"
-            method="POST"
-            className=" flex flex-col w-full md:w-1/2"
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="glass-card rounded-lg p-8"
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              className="p-2 bg-transparent border-2 rounded-md text-white placeholder-gray-400 border-white focus:outline-none"
-            />
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter your email"
-              className="my-4 p-2 bg-transparent border-2 rounded-md text-white placeholder-gray-400 border-white focus:outline-none"
-            />
-            <textarea
-              name="message"
-              placeholder="Enter your message"
-              rows="10"
-              className="p-2 bg-transparent border-2 rounded-md text-white border-white placeholder-from-orange-600 to-yellow focus:outline-none"
-            ></textarea>
+            <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+            <form
+              action="https://getform.io/f/c915a893-226d-4b9d-9dfd-f5b0d52df43b"
+              method="POST"
+              className="flex flex-col gap-4"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="p-3 bg-[#112240] border border-[#C084FC]/30 rounded-lg text-white placeholder-[#94A3B8] focus:outline-none focus:border-[#C084FC] transition-colors duration-300"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                className="p-3 bg-[#112240] border border-[#C084FC]/30 rounded-lg text-white placeholder-[#94A3B8] focus:outline-none focus:border-[#C084FC] transition-colors duration-300"
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="6"
+                required
+                className="p-3 bg-[#112240] border border-[#C084FC]/30 rounded-lg text-white placeholder-[#94A3B8] focus:outline-none focus:border-[#C084FC] transition-colors duration-300 resize-none"
+              ></textarea>
+              <button
+                type="submit"
+                className="btn-primary w-full"
+              >
+                Send Message
+              </button>
+            </form>
+          </motion.div>
 
-            <button className="text-black font-bold bg-gradient-to-r from-blue-700 to-gray-100 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-              Let's Connect
-            </button>
-          </form>
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col gap-6"
+          >
+            {/* Email */}
+            <div className="glass-card rounded-lg p-6 hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-center gap-4">
+                <div className="p-3 rounded-lg bg-[#C084FC]/10 border border-[#C084FC]/30">
+                  <HiOutlineMail className="text-2xl text-[#C084FC]" />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold mb-1">Email</h4>
+                  <a
+                    href="mailto:mundswastik@gmail.com"
+                    className="text-[#94A3B8] hover:text-[#3B82F6] transition-colors duration-300"
+                  >
+                    mundswastik@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="glass-card rounded-lg p-6 hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-center gap-4">
+                <div className="p-3 rounded-lg bg-[#C084FC]/10 border border-[#C084FC]/30">
+                  <HiOutlineMail className="text-2xl text-[#C084FC]" />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold mb-1">Phone</h4>
+                  <a
+                    href="tel:+918144774370"
+                    className="text-[#94A3B8] hover:text-[#3B82F6] transition-colors duration-300"
+                  >
+                    +91-8144774370
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="glass-card rounded-lg p-6">
+              <h4 className="text-white font-semibold mb-4">Connect With Me</h4>
+              <div className="flex gap-4">
+                <a
+                  href="https://github.com/swastik2203"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-[#C084FC]/10 border border-[#C084FC]/30 hover:bg-[#C084FC]/20 hover:scale-110 transition-all duration-300"
+                >
+                  <FaGithub className="text-2xl text-[#C084FC]" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/swastik2203"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-[#3B82F6]/10 border border-[#3B82F6]/30 hover:bg-[#3B82F6]/20 hover:scale-110 transition-all duration-300"
+                >
+                  <FaLinkedin className="text-2xl text-[#3B82F6]" />
+                </a>
+                <a
+                  href="/Resume.pdf"
+                  download
+                  className="p-3 rounded-lg bg-[#F472B6]/10 border border-[#F472B6]/30 hover:bg-[#F472B6]/20 hover:scale-110 transition-all duration-300"
+                >
+                  <BsFillPersonLinesFill className="text-2xl text-[#F472B6]" />
+                </a>
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="glass-card rounded-lg p-6">
+              <h4 className="text-white font-semibold mb-2">Location</h4>
+              <p className="text-[#94A3B8]">📍 Bengaluru, India</p>
+            </div>
+          </motion.div>
         </div>
       </div>
-      
     </div>
-    <div className="flex flex-row justify-center items-center bg-gradient-to-r from-black via-gray-900 to-black w-full">
-        <a href="https://github.com/swastik2203" className="px-4 ms-4 bg-transparent text-white rounded-md hover:scale-110 duration-300 mb-3"><FaGithub size={30} /></a>
-        <a href="https://www.linkedin.com/in/swastik2203" className="px-4 ms-4 bg-transparent text-white rounded-md hover:scale-110 duration-300 mb-3"><FaLinkedin size={30} /></a>
-        <a href="mailto:mundswastik@gmail.com" className="px-4 ms-4 bg-transparent text-white rounded-md hover:scale-110 duration-300 mb-3"><HiOutlineMail size={30} /></a>
-        <a href="/Resume.pdf" download={true} className="px-4 ms-4 bg-transparent text-white rounded-md hover:scale-110 duration-300 mb-3"><BsFillPersonLinesFill size={30} /></a>
-      </div>
-    </>
   );
 };
 
 export default Contact;
+
